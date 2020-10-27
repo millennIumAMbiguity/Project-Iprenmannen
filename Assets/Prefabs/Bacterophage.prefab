@@ -340,7 +340,7 @@ MonoBehaviour:
   - {fileID: 2008490507919053851}
   - {fileID: 2008490508556603412}
   walkDistance: 0.3
-  maxDistance: 2
+  maxDistance: 1.4
   hightAngle: -1
 --- !u!1 &2008490508385260082
 GameObject:
