@@ -43,7 +43,8 @@ public class GunBase : WeaponBase
             {
                 StopCoroutine(FastOverchargeCooldown());
                 RaycastHit();
-                overHeatSlider.value += overheatPerShot;
+                if (overHeatSlider != null)
+                    overHeatSlider.value += overheatPerShot;
 
                 StartCoroutine(ShootCooldown());
                 StartCoroutine(FastOverchargeCooldown());
@@ -55,7 +56,8 @@ public class GunBase : WeaponBase
             {
                 StopCoroutine(FastOverchargeCooldown());
                 RaycastHit();
-                overHeatSlider.value += overheatPerShot;
+                if (overHeatSlider != null)
+                    overHeatSlider.value += overheatPerShot;
 
                 StartCoroutine(ShootCooldown());
                 StartCoroutine(FastOverchargeCooldown());
