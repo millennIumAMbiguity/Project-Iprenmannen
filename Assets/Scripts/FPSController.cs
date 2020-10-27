@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Johan B.
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class FPSController : MonoBehaviour
     [Header("QoL Features")]
     [Tooltip("How long after button press a jump will go through.")]
     public float acceptableJumpTime = 1f;
-    public bool jump = false;
+    private bool jump = false;
     [Range(0.1f, 10f)]
     public float leanAngle = 0.5f;
 
