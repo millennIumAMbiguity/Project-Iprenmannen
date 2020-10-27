@@ -11,6 +11,8 @@ public class FPSController : MonoBehaviour
     [Range(2f, 120f)]
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;
+    public float lowJumpMultiplier = 2f;
+    public float fallMultiplier = 5f;
     public float gravity = 20.0f;
     [Header("Camera")]
     public Transform playerCamera;
@@ -25,7 +27,7 @@ public class FPSController : MonoBehaviour
     public float leanAngle = 0.5f;
 
     CharacterController characterController;
-    Animator anim; 
+    Animator anim;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
@@ -41,6 +43,7 @@ public class FPSController : MonoBehaviour
     void Update()
     {
         anim.SetFloat("MoveSpeed", characterController.velocity.magnitude);
+        anim.SetBool("Grounded", characterController.isGrounded);
 
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
@@ -57,9 +60,9 @@ public class FPSController : MonoBehaviour
             StartCoroutine(Jumped());
         }
 
-        if(jump && canMove && characterController.isGrounded)
+        if (jump && canMove && characterController.isGrounded)
         {
-                moveDirection.y = jumpSpeed;
+            moveDirection.y = jumpSpeed;
         }
         else
         {
@@ -67,14 +70,14 @@ public class FPSController : MonoBehaviour
         }
 
         // Lock cursor
-        if (Input.GetButtonDown("Cancel"))
-            lockMouse = !lockMouse;
+        /*if (Input.GetButtonDown("Cancel"))
+          lockMouse = !lockMouse;
 
         if (lockMouse)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-        }
+        }*/
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
