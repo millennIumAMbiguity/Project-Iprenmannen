@@ -21,6 +21,8 @@ public class FPSController : MonoBehaviour
     [Tooltip("How long after button press a jump will go through.")]
     public float acceptableJumpTime = 1f;
     public bool jump = false;
+    [Range(0.1f, 10f)]
+    public float leanAngle = 0.5f;
 
     CharacterController characterController;
     Animator anim; 
@@ -33,10 +35,12 @@ public class FPSController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        anim.SetFloat("MoveSpeed", characterController.velocity.magnitude);
 
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
@@ -88,7 +92,7 @@ public class FPSController : MonoBehaviour
         {
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, -Input.GetAxis("Horizontal") * leanAngle);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
 
         }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4366104877628894104}
   - component: {fileID: 1071930333454845498}
   - component: {fileID: 1136918339359802924}
-  - component: {fileID: 1490263324}
+  - component: {fileID: 762460310}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -75,8 +75,9 @@ MonoBehaviour:
   lookXLimit: 45
   acceptableJumpTime: 0.25
   jump: 0
+  leanAngle: 0.5
   canMove: 1
---- !u!95 &1490263324
+--- !u!95 &762460310
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
