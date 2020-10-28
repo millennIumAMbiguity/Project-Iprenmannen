@@ -4,7 +4,7 @@ using UnityEngine;
 //Johan B.
 public class WeaponBase : MonoBehaviour
 {
-    public int damage;
+    public float damage;
     public float range;
 
     virtual public void RaycastHit()
@@ -17,8 +17,15 @@ public class WeaponBase : MonoBehaviour
 
             if (hit.collider.tag == "Enemy")
             {
-                //GetComponent Enemy HP (Send damage)
-                Debug.Log("Enemy Hit");
+                AIHitbox hitbox = hit.collider.GetComponent<AIHitbox>();
+
+                if (hitbox != null)
+                {
+                    hitbox.Hit(damage);
+                    Debug.Log("Enemy Hit");
+                }
+                else
+                    Debug.Log("Enemy AIHitBox not found.");
             }
             else
             {

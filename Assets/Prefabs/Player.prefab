@@ -231,6 +231,8 @@ MonoBehaviour:
   walkingSpeed: 7.5
   runningSpeed: 11.5
   jumpSpeed: 8
+  lowJumpMultiplier: 2
+  fallMultiplier: 2.5
   gravity: 20
   playerCamera: {fileID: 780268237405899744}
   lockMouse: 1
