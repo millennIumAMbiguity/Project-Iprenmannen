@@ -3,6 +3,7 @@ using UnityEditor;
 #endif
 using UnityEngine;
 /// <summary>
+/// millennIumAMbiguity
 /// based on: Fabrik IK Solver - ditzel/SimpleIK
 /// </summary>
 public class FastIKFabric : MonoBehaviour
