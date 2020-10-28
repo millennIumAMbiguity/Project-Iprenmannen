@@ -25,7 +25,7 @@ public class WeaponBase : MonoBehaviour
                     Debug.Log("Enemy Hit");
                 }
                 else
-                    Debug.Log("Enemy AIHitBox not found.");
+                    Debug.LogWarning("Enemy AIHitBox not found.");
             }
             else
             {

@@ -19,7 +19,8 @@ public class WeaponController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeWeapons();
+        if (weapons != null)
+            ChangeWeapons();
 
         if (Input.inputString != "")
         {
@@ -35,7 +36,7 @@ public class WeaponController : MonoBehaviour
         }
 
         curWeapon += (int)Input.mouseScrollDelta.y * (int)scrollScale;
-        curWeapon = Mathf.Clamp(curWeapon, 0, weapons.Length -1);
+        curWeapon = Mathf.Clamp(curWeapon, 0, weapons.Length - 1);
 
     }
 

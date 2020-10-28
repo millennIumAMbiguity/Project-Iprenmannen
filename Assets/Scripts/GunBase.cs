@@ -87,6 +87,12 @@ public class GunBase : WeaponBase
             overChargeReached = false;
             canShoot = true;
         }
+        else if (overHeatSlider.value <= 0 + overChargeReachedDiff)
+        {
+            overChargeReached = false;
+            canShoot = true;
+        }   
+
 
         sliderFill.color = Color.Lerp(Color.white, Color.red, overHeatSlider.value / overHeatSlider.maxValue);
     }

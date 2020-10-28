@@ -322,8 +322,8 @@ MonoBehaviour:
   automatic: 0
   fastOverheatCooldownTimer: 0
   overheatPerShot: 0
-  normalOverheatDecreaseValue: 0
-  fastOverheatDecreaseValue: 0
+  normalOverheatDecreaseValue: 30
+  fastOverheatDecreaseValue: 30
   overChargeReached: 0
   overChargeReachedDiff: 0.5
   fastOverHeatCooldown: 1
@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff44f309e28777499446924e39c5fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curWeapon: 2
+  curWeapon: 0
   scrollScale: 1
   weapons:
   - {fileID: 320926048100437193}
