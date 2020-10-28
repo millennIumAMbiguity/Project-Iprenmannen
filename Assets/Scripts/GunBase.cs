@@ -25,11 +25,13 @@ public class GunBase : WeaponBase
     [SerializeField]
     private bool fastOverHeatCooldown = true;
 
-    private void Start()
+#if UNITY_EDITOR
+    private void Awake()
     {
         if (overHeatSlider == null || sliderFill == null)
-            Debug.Log("<color=red>Error: </color>Slider/SliderFill not found.");
+            Debug.LogWarning("Slider/SliderFill not found.");
     }
+#endif
 
     void Update()
     {
