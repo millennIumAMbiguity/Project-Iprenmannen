@@ -12,6 +12,9 @@ public class AIHitbox : MonoBehaviour
         if (controller == null) {
             Debug.LogWarning("'controller' is not set.");
         }
+        if (damageMultiplier <= 0) {
+            Debug.LogWarning("'damageMultiplier' is equal or less then 0");
+        }
     }
 #endif
 
