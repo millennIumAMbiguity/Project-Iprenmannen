@@ -19,6 +19,6 @@ public class AIHitbox : MonoBehaviour
         controller.TakeDamage(damage * damageMultiplier);
     }
     public void Hit() {
-        controller.TakeDamage(Stats.playerHP * damageMultiplier);
+        controller.TakeDamage(Stats.playerHealth * damageMultiplier);
     }
 }
