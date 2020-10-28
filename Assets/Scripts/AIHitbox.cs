@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AIHitbox : MonoBehaviour
 {
@@ -19,5 +17,8 @@ public class AIHitbox : MonoBehaviour
 
     public void Hit(float damage) {
         controller.TakeDamage(damage * damageMultiplier);
+    }
+    public void Hit() {
+        controller.TakeDamage(Stats.playerHP * damageMultiplier);
     }
 }
