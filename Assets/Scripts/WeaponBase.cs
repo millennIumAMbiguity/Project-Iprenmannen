@@ -21,7 +21,7 @@ public class WeaponBase : MonoBehaviour
 
                 if (hitbox != null)
                 {
-                    hitbox.Hit(damage);
+                    hitbox.Hit(damage * Stats.playerDamage);
                     Debug.Log("Enemy Hit");
                 }
                 else
