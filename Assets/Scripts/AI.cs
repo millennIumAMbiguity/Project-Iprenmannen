@@ -9,7 +9,8 @@ public class AI : MonoBehaviour
 
     NavMeshAgent agent;
     GameObject[] go;
-
+    public float hp = 20;
+    public GameObject parent;
 
     void Start() {
         agent = GetComponent<NavMeshAgent>();
@@ -30,6 +31,17 @@ public class AI : MonoBehaviour
         } else {
             agent.isStopped = false;
         }
+    }
+
+    public void TakeDamage(float damage) {
+        hp -= damage;
+        if (hp <= 0) {
+            Kill();
+        }
+    }
+
+    void Kill() {
+        Destroy(parent);
     }
 
 
