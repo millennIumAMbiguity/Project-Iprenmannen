@@ -51,7 +51,6 @@ public class UpgradeShopManager : MonoBehaviour
 		PlayerControllerScript.GetComponent<FPSController>().enabled = true;
 		Time.timeScale = 1f;
 		ShopIsOpen = false;
-		Debug.Log("Exit shop");
 	}
 	void OpenShop()
     {

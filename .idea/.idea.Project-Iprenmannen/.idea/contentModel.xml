@@ -8,11 +8,13 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="AI.cs" t="Include" />
+          <e p="AIHitbox.cs" t="Include" />
           <e p="FastIKFabric.cs" t="Include" />
           <e p="FPSController.cs" t="Include" />
           <e p="GunBase.cs" t="Include" />
           <e p="IKControl.cs" t="Include" />
           <e p="LockRotation.cs" t="Include" />
+          <e p="Stats.cs" t="Include" />
           <e p="UpgradeShopManager.cs" t="Include" />
           <e p="WeaponBase.cs" t="Include" />
         </e>
