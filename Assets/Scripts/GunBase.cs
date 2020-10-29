@@ -14,6 +14,9 @@ public class GunBase : WeaponBase
     public float cooldownTimer = 0.25f;
     public bool automatic = false;
     [Header("Overheating stats")]
+    public float maxOverheat = 100;
+    [SerializeField]
+    private float curOverheat = 0;
     public float fastOverheatCooldownTimer = 3f;
     public float overheatPerShot = 15f;
     public float normalOverheatDecreaseValue = 15f;
@@ -35,6 +38,7 @@ public class GunBase : WeaponBase
 
     void Update()
     {
+        curOverheat = Mathf.Clamp(curOverheat, 0, maxOverheat);
 
         if (overHeatSlider && sliderFill != null)
             OverheatManagement();
@@ -46,7 +50,7 @@ public class GunBase : WeaponBase
                 StopCoroutine(FastOverchargeCooldown());
                 RaycastHit();
                 if (overHeatSlider != null)
-                    overHeatSlider.value += overheatPerShot;
+                    curOverheat += overheatPerShot;
 
                 StartCoroutine(ShootCooldown());
                 StartCoroutine(FastOverchargeCooldown());
@@ -59,7 +63,7 @@ public class GunBase : WeaponBase
                 StopCoroutine(FastOverchargeCooldown());
                 RaycastHit();
                 if (overHeatSlider != null)
-                    overHeatSlider.value += overheatPerShot;
+                    curOverheat += overheatPerShot;
 
                 StartCoroutine(ShootCooldown());
                 StartCoroutine(FastOverchargeCooldown());
@@ -69,13 +73,15 @@ public class GunBase : WeaponBase
 
     private void OverheatManagement()
     {
-        if (overHeatSlider.value > 0)
+        overHeatSlider.value = curOverheat;
+
+        if (curOverheat > 0)
         {
-            overHeatSlider.value -= fastOverHeatCooldown ?
+            curOverheat -= fastOverHeatCooldown ?
                 fastOverheatDecreaseValue * Time.deltaTime : normalOverheatDecreaseValue * Time.deltaTime;
         }
 
-        if (overHeatSlider.value >= overHeatSlider.maxValue - overChargeReachedDiff)
+        if (curOverheat >= maxOverheat - overChargeReachedDiff)
             overChargeReached = true;
 
         if (overChargeReached && canShoot)
@@ -84,19 +90,19 @@ public class GunBase : WeaponBase
             StopAllCoroutines();
             StartCoroutine(FastOverchargeCooldown());
         }
-        else if (overChargeReached && overHeatSlider.value <= 0 + overChargeReachedDiff)
+        else if (overChargeReached && curOverheat <= 0 + overChargeReachedDiff)
         {
             overChargeReached = false;
             canShoot = true;
         }
-        else if (overHeatSlider.value <= 0 + overChargeReachedDiff)
+        else if (curOverheat <= 0 + overChargeReachedDiff)
         {
             overChargeReached = false;
             canShoot = true;
         }   
 
 
-        sliderFill.color = Color.Lerp(Color.white, Color.red, overHeatSlider.value / overHeatSlider.maxValue);
+        sliderFill.color = Color.Lerp(Color.white, Color.red, curOverheat / maxOverheat);
     }
 
     IEnumerator FastOverchargeCooldown()
