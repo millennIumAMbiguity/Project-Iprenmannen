@@ -12,6 +12,14 @@ public class AIDeath : MonoBehaviour
 
     static AIDeath instance;
 
+#if UNITY_EDITOR
+    void Awake() {
+        if (this.enabled) {
+            this.enabled = false;
+            Debug.LogWarning("Is enabled at startup, should be disabled.");
+        }
+    }
+#endif
 
     public void Die() {
         if (instance != null) {

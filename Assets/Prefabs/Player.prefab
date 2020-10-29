@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
-  healAmount: 0.02
+  healAmount: 0.2
 --- !u!1 &3945319830665596043
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,12 +18,18 @@ public class AIHeadBang : MonoBehaviour
 
     private void Awake() {
         neckStart = neck.localRotation.eulerAngles;
+#if UNITY_EDITOR
+        if (this.enabled) {
+            this.enabled = false;
+            Debug.LogWarning("Is enabled at startup, should be disabled.");
+        }
+#endif
     }
 
     public void Play(GameObject target) {
         if (!this.enabled) {
             this.target = target;
-            t = 0;
+            t = 0f;
             hit = false;
             this.enabled = true;
         }
@@ -40,7 +46,7 @@ public class AIHeadBang : MonoBehaviour
         t += Time.fixedDeltaTime;
 
         if (t >= hitTime) {
-            if (!hit) {
+            if (!hit && t < hitTime +0.25f && Vector3.Distance(transform.position, target.transform.position) <= 2f) {
                 target.GetComponent<Health>().Hit();
                 hit = true;
             }
