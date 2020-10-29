@@ -16,7 +16,6 @@ public class FPSController : MonoBehaviour
     public float gravity = 20.0f;
     [Header("Camera")]
     public Transform playerCamera;
-    public bool lockMouse = false;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
     [Header("QoL Features")]
@@ -67,16 +66,6 @@ public class FPSController : MonoBehaviour
         else
         {
             moveDirection.y = movementDirectionY;
-        }
-
-        // Lock cursor
-        if (Input.GetButtonDown("Cancel"))
-          lockMouse = !lockMouse;
-
-        if (lockMouse)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
