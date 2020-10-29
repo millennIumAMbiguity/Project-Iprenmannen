@@ -16,6 +16,10 @@ public class AIHeadBang : MonoBehaviour
 
     Vector3 neckStart;
 
+    [Header("Sound")]
+    public AudioSource audioSource;
+    public AudioClip hitSound;
+
     private void Awake() {
         neckStart = neck.localRotation.eulerAngles;
 #if UNITY_EDITOR
@@ -47,6 +51,7 @@ public class AIHeadBang : MonoBehaviour
 
         if (t >= hitTime) {
             if (!hit && t < hitTime +0.25f && Vector3.Distance(transform.position, target.transform.position) <= 2f) {
+                audioSource.PlayOneShot(hitSound);
                 target.GetComponent<Health>().Hit();
                 hit = true;
             }
