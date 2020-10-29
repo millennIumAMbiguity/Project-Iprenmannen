@@ -8,15 +8,18 @@ public class WeaponBase : MonoBehaviour
     public float range;
     Transform camtrans;
 
+    int ignore;
+
     private void Awake() {
         camtrans = Camera.main.transform;
+        ignore = ~(1 << LayerMask.NameToLayer("Invisible Wall"));
     }
 
     virtual public void RaycastHit()
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(camtrans.position, camtrans.TransformDirection(Vector3.forward), out hit, range))
+        if (Physics.Raycast(camtrans.position, camtrans.TransformDirection(Vector3.forward), out hit, range, ignore))
         {
 
             if (hit.collider.tag == "Enemy")
