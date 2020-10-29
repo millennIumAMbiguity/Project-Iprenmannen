@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+//millennIumAMbiguity
 public class AIDeath : MonoBehaviour
 {
 
@@ -27,7 +26,7 @@ public class AIDeath : MonoBehaviour
 
     void FixedUpdate() {
         smr.material.SetFloat("_Level", level);
-        level -= 0.02f;
+        level -= Time.fixedDeltaTime;
         if (level <= 0) {
             instance = null;
             ai.Kill();

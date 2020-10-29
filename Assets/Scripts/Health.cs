@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
     }
 
     protected void GameOver() {
-        if (Stats.time == 0f)
+        if (Stats.time != 0f)
             return;
         Debug.Log("Game Over");
         Stats.time = Time.time;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//millennIumAMbiguity
 [RequireComponent(typeof(NavMeshAgent))]
 public class AI : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class AI : MonoBehaviour
     public float hp = 20;
     public GameObject parent;
     public AIDeath aiDeath;
+    public AIHeadBang aiHeadBanging;
 
     void Start() {
         agent = GetComponent<NavMeshAgent>();
@@ -23,15 +25,19 @@ public class AI : MonoBehaviour
 
     private void FixedUpdate() {
         float dist = 99999;
+        GameObject target = null;
         foreach (GameObject item in go) {
             float d = Vector3.Distance(transform.position, item.transform.position);
             if (d < dist) {
                 dist = d;
+                target = item;
                 agent.SetDestination(item.transform.position);
             }
         }
         if (dist < 2f) {
             agent.isStopped = true;
+            if (target != null)
+            aiHeadBanging.Play(target);
         } else {
             agent.isStopped = false;
         }

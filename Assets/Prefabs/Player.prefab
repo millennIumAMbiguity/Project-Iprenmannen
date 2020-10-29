@@ -101,6 +101,8 @@ MonoBehaviour:
   sliderFill: {fileID: 0}
   cooldownTimer: 0.5
   automatic: 0
+  maxOverheat: 100
+  curOverheat: 0
   fastOverheatCooldownTimer: 0
   overheatPerShot: 0
   normalOverheatDecreaseValue: 30
@@ -249,6 +251,8 @@ MonoBehaviour:
   sliderFill: {fileID: 0}
   cooldownTimer: 0.25
   automatic: 0
+  maxOverheat: 100
+  curOverheat: 0
   fastOverheatCooldownTimer: 3
   overheatPerShot: 15
   normalOverheatDecreaseValue: 15
@@ -479,6 +483,8 @@ MonoBehaviour:
   sliderFill: {fileID: 0}
   cooldownTimer: 0.25
   automatic: 1
+  maxOverheat: 100
+  curOverheat: 0
   fastOverheatCooldownTimer: 3
   overheatPerShot: 15
   normalOverheatDecreaseValue: 15
@@ -641,7 +647,6 @@ MonoBehaviour:
   fallMultiplier: 2.5
   gravity: 20
   playerCamera: {fileID: 780268237405899744}
-  lockMouse: 1
   lookSpeed: 2
   lookXLimit: 45
   acceptableJumpTime: 0.25
@@ -696,7 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75194bb83b801040858b8bdb7f392b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 2
   healAmount: 0.02
 --- !u!1 &3945319830665596043
 GameObject:

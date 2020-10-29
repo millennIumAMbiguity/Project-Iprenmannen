@@ -334,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2008490508607004059, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2008490508607004059, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -631,7 +631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2008490508607004059, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2008490508607004059, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1323,6 +1323,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 303245007797490703, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 303245007797490703, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 303245007797490703, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 303245007797490703, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 303245007797490703, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 303245007797490703, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 303245007797490703, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0053415666
+      objectReference: {fileID: 0}
     - target: {fileID: 2008490508607004058, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
       propertyPath: m_Name
       value: Bacterophage (1)
@@ -2473,7 +2501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4157948347148948793, guid: b9693ea90f4c1db498d76692c063b7d9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4157948347148948793, guid: b9693ea90f4c1db498d76692c063b7d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2985,7 +3013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4366104877628894104, guid: 86f2d3b33ce4e274ba96f53988e73daf, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4366104877628894104, guid: 86f2d3b33ce4e274ba96f53988e73daf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
