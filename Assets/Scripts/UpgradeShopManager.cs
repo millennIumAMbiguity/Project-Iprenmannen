@@ -6,33 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class UpgradeShopManager : MonoBehaviour
 {
-	public static bool ShopIsOpen = false;
-
-	public GameObject shopMenuUI;
-
-	public GameObject PlayerControllerScript;
-
-	private void Start()
-	{
-		PlayerControllerScript = GameObject.FindGameObjectWithTag("Player");
-	}
-
-	private void Update()
-	{
-		if (Input.GetButtonDown("Cancel"))
-		{
-			if (ShopIsOpen)
-			{
-				CloseShop();
-			}
-			else
-			{
-				OpenShop();
-				
-			}
-		}
-	}
-
 	void UpgradePlayerHealth()
 	{
 		//TODO: Implement code to upgrade player health
@@ -44,19 +17,4 @@ public class UpgradeShopManager : MonoBehaviour
 		//TODO: Implement code to upgrade player damage
 		Debug.Log("Pressed DMG button");
 	}
-
-	void CloseShop()
-	{
-		shopMenuUI.SetActive(false);
-		PlayerControllerScript.GetComponent<FPSController>().enabled = true;
-		Time.timeScale = 1f;
-		ShopIsOpen = false;
-	}
-	void OpenShop()
-    {
-     	shopMenuUI.SetActive(true);
-        PlayerControllerScript.GetComponent<FPSController>().enabled = false;
-        Time.timeScale = 0f;
-        ShopIsOpen = true;
-    }
 }
