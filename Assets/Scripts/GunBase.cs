@@ -26,7 +26,7 @@ public class GunBase : WeaponBase
     private bool fastOverHeatCooldown = true;
 
 #if UNITY_EDITOR
-    private void Awake()
+    private void Start()
     {
         if (overHeatSlider == null || sliderFill == null)
             Debug.LogWarning("Slider/SliderFill not found.");

@@ -6,14 +6,18 @@ public class WeaponBase : MonoBehaviour
 {
     public float damage;
     public float range;
+    Transform camtrans;
+
+    private void Awake() {
+        camtrans = Camera.main.transform;
+    }
 
     virtual public void RaycastHit()
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, range))
+        if (Physics.Raycast(camtrans.position, camtrans.TransformDirection(Vector3.forward), out hit, range))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
 
             if (hit.collider.tag == "Enemy")
             {
@@ -24,18 +28,21 @@ public class WeaponBase : MonoBehaviour
                     hitbox.Hit(damage * Stats.playerDamage);
                     Debug.Log("Enemy Hit");
                 }
-                else
+                else {
                     Debug.LogWarning("Enemy AIHitBox not found.");
+                }
             }
+#if UNITY_EDITOR
             else
             {
-                Debug.Log("Hit");
+                Debug.Log("Hit tag: " + hit.collider.tag);
             }
-        }
-        else
+            Debug.DrawRay(camtrans.position, camtrans.TransformDirection(Vector3.forward) * hit.distance, Color.yellow, 0.2f);
+        } else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            Debug.DrawRay(camtrans.position, camtrans.TransformDirection(Vector3.forward) * range, Color.red);
             Debug.Log("Miss");
+#endif
         }
     }
 }
