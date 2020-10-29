@@ -22,8 +22,9 @@
     <list default="true" id="1aeadc5b-319a-41ea-871a-5e2c3f4fd8f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Iprenmannen/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Iprenmannen/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Iprenmannen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Iprenmannen/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AlmostGosu92.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AlmostGosu92.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +42,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Stats.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FPSController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UpgradeShopManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
@@ -94,7 +95,7 @@
       <workItem from="1603835571739" duration="755000" />
       <workItem from="1603874948295" duration="3714000" />
       <workItem from="1603907800571" duration="328000" />
-      <workItem from="1603959651187" duration="16164000" />
+      <workItem from="1603959651187" duration="17455000" />
     </task>
     <servers />
   </component>

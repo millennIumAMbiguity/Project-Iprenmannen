@@ -8,7 +8,8 @@ public class MainMenu : MonoBehaviour
 	public void PlayGame()
 	{
 		//TODO: Fix scene setup
-		//SceneManager.LoadScene("GameScene");
+		
+		AutoFade.LoadLevel(1, 2f, 2f, Color.black);
 		Debug.Log("Play Game");
 	}
 

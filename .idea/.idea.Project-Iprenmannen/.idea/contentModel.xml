@@ -22,6 +22,7 @@
           <e p="MainMenu.cs" t="Include" />
           <e p="MenuManager.cs" t="Include" />
           <e p="PlayerHealth.cs" t="Include" />
+          <e p="Spawner.cs" t="Include" />
           <e p="Stats.cs" t="Include" />
           <e p="UpgradeShopManager.cs" t="Include" />
           <e p="WeaponBase.cs" t="Include" />

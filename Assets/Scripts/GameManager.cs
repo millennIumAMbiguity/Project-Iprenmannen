@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    public MenuManager MenuManager;
+    public MenuManager menuManager;
 
     public static bool GameIsPaused;
     public static bool ShopIsOpen;
@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         GameIsPaused = false;
         ShopIsOpen = false;
         inShopArea = false;
-        MenuManager.LockMouse();
+        menuManager.LockMouse();
     }
 
     private void Update()
@@ -27,11 +27,11 @@ public class GameManager : MonoBehaviour
         {
             if (GameIsPaused)
             {
-                MenuManager.ClosePauseMenu();
+                menuManager.ClosePauseMenu();
             }
             else 
             {  
-                MenuManager.OpenPauseMenu();
+                menuManager.OpenPauseMenu();
             }
         }
         
@@ -40,12 +40,12 @@ public class GameManager : MonoBehaviour
         {
             if(!ShopIsOpen && Input.GetButtonDown("shopButton"))
             {
-                MenuManager.OpenShopMenu();
+                menuManager.OpenShopMenu();
             }
 
             if (ShopIsOpen && Input.GetButtonDown("shopButton"))
             {
-                MenuManager.CloseShopMenu();
+                menuManager.CloseShopMenu();
             }
         }
     }
