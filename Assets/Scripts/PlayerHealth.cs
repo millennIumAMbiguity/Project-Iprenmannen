@@ -13,7 +13,7 @@ public class PlayerHealth : Health
 
     void FixedUpdate() {
         Stats.playerHealth += healAmount;
-        if (Stats.playerHealth > maxHealth) {
+        if (Stats.playerHealth > maxHealth + Stats.playerHealthUpgrades) {
             Stats.playerHealth = maxHealth;
         }
     }
