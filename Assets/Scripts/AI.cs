@@ -8,13 +8,17 @@ public class AI : MonoBehaviour
 {
 
     NavMeshAgent agent;
+    float speed;
     GameObject[] go;
     public float hp = 20;
     public GameObject parent;
+    public AIDeath aiDeath;
 
     void Start() {
         agent = GetComponent<NavMeshAgent>();
         go = GameObject.FindGameObjectsWithTag("Player");
+        agent.speed += Random.Range(-0.1f,0.1f);
+        speed = agent.speed;
     }
 
     private void FixedUpdate() {
@@ -31,16 +35,24 @@ public class AI : MonoBehaviour
         } else {
             agent.isStopped = false;
         }
+        if (agent.speed < speed) {
+            agent.speed += 0.002f;
+        }
+
     }
 
     public void TakeDamage(float damage) {
         hp -= damage;
-        if (hp <= 0) {
-            Kill();
+        agent.speed -= damage / 100f;
+        if (hp <= 0 && this.enabled) {
+            agent.speed = 0;
+            agent.isStopped = true;
+            aiDeath.Die();
+            this.enabled = false;
         }
     }
 
-    void Kill() {
+    public void Kill() {
         Destroy(parent);
     }
 
