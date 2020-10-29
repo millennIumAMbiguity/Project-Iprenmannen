@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1aeadc5b-319a-41ea-871a-5e2c3f4fd8f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Iprenmannen/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Iprenmannen/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Iprenmannen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Iprenmannen/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AlmostGosu92.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AlmostGosu92.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FPSController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FPSController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpgradeShopManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UpgradeShopManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +42,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FPSController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UpgradeShopManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UpgradeShopManager.cs" />
       </list>
     </option>
   </component>
@@ -97,7 +92,7 @@
       <workItem from="1603835571739" duration="755000" />
       <workItem from="1603874948295" duration="3714000" />
       <workItem from="1603907800571" duration="328000" />
-      <workItem from="1603959651187" duration="12567000" />
+      <workItem from="1603959651187" duration="13485000" />
     </task>
     <servers />
   </component>

@@ -8,13 +8,13 @@ public class UpgradeShopManager : MonoBehaviour
 {
 	void UpgradePlayerHealth()
 	{
-		//TODO: Implement code to upgrade player health
+		Stats.playerHealthUpgrades++;
 		Debug.Log("Pressed HP button");
 	}
 
 	void UpgradePlayerDamage()
 	{
-		//TODO: Implement code to upgrade player damage
+		Stats.playerDamage++;
 		Debug.Log("Pressed DMG button");
 	}
 }
