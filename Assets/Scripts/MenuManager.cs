@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class MenuManager : MonoBehaviour
 {
     public GameObject PausMenuUI;
+    public GameObject ShopMenuUi;
 
     public FPSController playerControl;
 
@@ -14,18 +15,43 @@ public class MenuManager : MonoBehaviour
     {
         playerControl = GameObject.FindGameObjectWithTag("Player").GetComponent<FPSController>();
     }
+
+    public void OpenPauseMenu()
+    {
+        PausMenuUI.SetActive(true);
+        PauseGame();
+    }
+
+    public void ClosePauseMenu()
+    {
+        PausMenuUI.SetActive(false);
+        ResumeGame();
+    }
+
+    public void OpenShopMenu()
+    {
+        ShopMenuUi.SetActive(true);
+        PauseGame();
+        GameManager.ShopIsOpen = true;
+    }
+
+    public void CloseShopMenu()
+    {
+        ShopMenuUi.SetActive(false);
+        ResumeGame();
+        GameManager.ShopIsOpen = false;
+    }
     
     public void PauseGame()
     {
-        PausMenuUI.SetActive(true);
         playerControl.enabled = false;
         Time.timeScale = 0f;
         UnlockMouse();
+        GameManager.GameIsPaused = true;
     }
 
     public void ResumeGame()
     {
-        PausMenuUI.SetActive(false);
         playerControl.enabled = true;
         Time.timeScale = 1f;
         LockMouse();

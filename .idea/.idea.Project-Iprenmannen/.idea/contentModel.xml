@@ -9,7 +9,9 @@
         <e p="Scripts" t="Include">
           <e p="AI.cs" t="Include" />
           <e p="AIHitbox.cs" t="Include" />
+          <e p="AutoFade.cs" t="Include" />
           <e p="Breathing.cs" t="Include" />
+          <e p="FadeShader.shader" t="Include" />
           <e p="FastIKFabric.cs" t="Include" />
           <e p="FPSController.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
