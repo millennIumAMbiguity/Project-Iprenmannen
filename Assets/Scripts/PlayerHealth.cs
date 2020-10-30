@@ -6,6 +6,9 @@ public class PlayerHealth : Health
     public float healAmount = 0.2f;
 
     private void Awake() {
+        if (Stats.instance == null) {
+            Stats.instance = new Stats.data();
+        }
         Stats.instance.playerHealth = maxHealth;
     }
     public override void Hit(float damage = 1f) {
