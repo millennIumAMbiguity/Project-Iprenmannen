@@ -6,22 +6,22 @@ public class PlayerHealth : Health
     public float healAmount = 0.2f;
 
     private void Awake() {
-        Stats.playerHealth = maxHealth;
+        Stats.instance.playerHealth = maxHealth;
     }
     public override void Hit(float damage = 1f) {
-        Stats.playerHealth -= 1f;
+        Stats.instance.playerHealth -= 1f;
 #if UNITY_EDITOR
-        Debug.Log( "player took damage and is now at HP: "+ Stats.playerHealth);
+        Debug.Log( "player took damage and is now at HP: "+ Stats.instance.playerHealth);
 #endif
-        if (Stats.playerHealth <= 0) {
+        if (Stats.instance.playerHealth <= 0) {
             GameOver();
         }
     }
 
     void FixedUpdate() {
-        Stats.playerHealth += healAmount * Time.fixedDeltaTime;
-        if (Stats.playerHealth > maxHealth + Stats.playerHealthUpgrades) {
-            Stats.playerHealth = maxHealth;
+        Stats.instance.playerHealth += healAmount * Time.fixedDeltaTime;
+        if (Stats.instance.playerHealth > maxHealth + Stats.instance.playerHealthUpgrades) {
+            Stats.instance.playerHealth = maxHealth;
         }
     }
 }

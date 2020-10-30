@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class UpgradeShopManager : MonoBehaviour
 {
@@ -19,23 +13,23 @@ public class UpgradeShopManager : MonoBehaviour
 
 	public void UpgradePlayerHealth()
 	{
-		Stats.playerHealthUpgrades++;
+		Stats.instance.playerHealthUpgrades++;
 		DisplayPlayerHealth();
 	}
 
 	public void UpgradePlayerDamage()
 	{
-		Stats.playerDamage++;
+		Stats.instance.playerDamage++;
 		DisplayPlayerDamage();
 	}
 
 	private void DisplayPlayerHealth()
 	{
-		hp.text = "Health: " + (Stats.playerHealthUpgrades + 2);
+		hp.text = "Health: " + (Stats.instance.playerHealthUpgrades + 2);
 	}
 
 	private void DisplayPlayerDamage()
 	{
-		dmg.text = "Damage: " + Stats.playerDamage;
+		dmg.text = "Damage: " + Stats.instance.playerDamage;
 	}
 }

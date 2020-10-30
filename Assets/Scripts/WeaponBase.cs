@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 //Johan B.
 public class WeaponBase : MonoBehaviour
 {
@@ -28,7 +26,7 @@ public class WeaponBase : MonoBehaviour
 
                 if (hitbox != null)
                 {
-                    hitbox.Hit(damage * Stats.playerDamage);
+                    hitbox.Hit(damage * Stats.instance.playerDamage);
                     Debug.Log("Enemy Hit");
                 }
                 else {
