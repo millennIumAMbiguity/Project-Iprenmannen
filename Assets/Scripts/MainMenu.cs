@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 	public void PlayGame()
 	{
 		//TODO: Fix scene setup
-		
+		Stats.instance = new Stats.data();
 		AutoFade.LoadLevel(1, 2f, 2f, Color.black);
 		Debug.Log("Play Game");
 	}
