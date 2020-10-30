@@ -22,4 +22,8 @@ public class MainMenu : MonoBehaviour
 #endif
 		
 	}
+
+	public void Credits() {
+		AutoFade.LoadLevel(3, 1f, 2f, Color.black);
+	}
 }
