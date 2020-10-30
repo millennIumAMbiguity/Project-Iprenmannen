@@ -3717,7 +3717,7 @@ MonoBehaviour:
   - {fileID: 2008490508607004058, guid: 39e35af29a1467a49bdbd7b95da2a865, type: 3}
   cooldown: 30
   difficulty: 10
-  difficultyChange: 1
+  difficultyChange: 2.5
 --- !u!4 &1643465866
 Transform:
   m_ObjectHideFlags: 0
