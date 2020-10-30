@@ -8,6 +8,7 @@ public class GunBase : WeaponBase
     [Header("Components")]
     public Slider overHeatSlider;
     public Image sliderFill;
+    public ParticleSystem shootEffect;
 
     [Header("Gun Settings")]
     [Tooltip("Time between shots")]
@@ -33,6 +34,7 @@ public class GunBase : WeaponBase
     {
         if (overHeatSlider == null || sliderFill == null)
             Debug.LogWarning("Slider/SliderFill not found.");
+        shootEffect = GetComponentInChildren<ParticleSystem>();
     }
 #endif
 
@@ -47,6 +49,9 @@ public class GunBase : WeaponBase
         {
             if (Input.GetButtonDown("Fire1") && canShoot)
             {
+                if (shootEffect != null)
+                    shootEffect.Play();
+
                 StopCoroutine(FastOverchargeCooldown());
                 RaycastHit();
                 if (overHeatSlider != null)
@@ -60,6 +65,9 @@ public class GunBase : WeaponBase
         {
             if (Input.GetButton("Fire1") && canShoot)
             {
+                if (shootEffect != null)
+                    shootEffect.Play();
+
                 StopCoroutine(FastOverchargeCooldown());
                 RaycastHit();
                 if (overHeatSlider != null)
@@ -99,7 +107,7 @@ public class GunBase : WeaponBase
         {
             overChargeReached = false;
             canShoot = true;
-        }   
+        }
 
 
         sliderFill.color = Color.Lerp(Color.white, Color.red, curOverheat / maxOverheat);
