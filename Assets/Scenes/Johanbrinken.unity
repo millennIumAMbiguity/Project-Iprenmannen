@@ -816,6 +816,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6303968, guid: 86f2d3b33ce4e274ba96f53988e73daf, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 359829335, guid: 86f2d3b33ce4e274ba96f53988e73daf, type: 3}
       propertyPath: overHeatSlider
       value: 
@@ -832,6 +836,10 @@ PrefabInstance:
       propertyPath: sliderFill
       value: 
       objectReference: {fileID: 936762076}
+    - target: {fileID: 2036050038, guid: 86f2d3b33ce4e274ba96f53988e73daf, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 320926048100437194, guid: 86f2d3b33ce4e274ba96f53988e73daf, type: 3}
       propertyPath: overHeatSlider
       value: 
