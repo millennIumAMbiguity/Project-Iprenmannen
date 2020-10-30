@@ -28,27 +28,26 @@ public class IKControl : MonoBehaviour
             RaycastHit hit;
             Vector3 direction = transform.TransformDirection(new Vector3(-Mathf.Sin(currentAngle), hightAngle, -Mathf.Cos(currentAngle)));
             if (
-                #if UNITY_EDITOR
+#if UNITY_EDITOR
                 targets[i] != null &&
-                #endif
+#endif
                 Physics.Raycast(transform.position, direction, out hit, maxDistance)) {
 
-                #if UNITY_EDITOR
+#if UNITY_EDITOR
                 Debug.DrawRay(transform.position, direction * hit.distance, Color.yellow);
-                #endif
+#endif
 
                 if (Vector3.Distance(hit.point, targets[i].position) > walkDistance) {
-                    targets[i].position = hit.point + (1f + UnityEngine.Random.Range(-1f,0f))*( hit.point - targets[i].position);
+                    targets[i].position = hit.point + (1f + UnityEngine.Random.Range(-1f, 0f)) * (hit.point - targets[i].position);
                     audioSource.PlayOneShot(hitSound);
 #if UNITY_EDITOR
                     Debug.DrawLine(targets[i].position, targets[i].position + new Vector3(0,0.3f,0),Color.green, 0.5f);
 #endif
                 }
-            }
-            else {
-            #if UNITY_EDITOR
+            } else {
+#if UNITY_EDITOR
                 Debug.DrawRay(transform.position, direction * maxDistance, Color.red);
-
+#endif
                 direction = transform.TransformDirection(new Vector3(-Mathf.Sin(currentAngle), hightAngle -1f, -Mathf.Cos(currentAngle)));
                 if (
 #if UNITY_EDITOR
@@ -67,7 +66,6 @@ public class IKControl : MonoBehaviour
 #endif
                     }
                 }
-#endif
 
             }
             currentAngle += angle;
