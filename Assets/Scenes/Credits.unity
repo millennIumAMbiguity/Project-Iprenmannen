@@ -202,6 +202,7 @@ MonoBehaviour:
 
 
 
+
     Assets'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -837,9 +838,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\nProgramers\n\n\n\nUI designers\n\n\n3D Rigger\r\nAI Behavor Programer\nAI
-    Designer\nHead Modeler\r\nHead Player Movement Programer\nIK Specialist\r\nLevel
-    Designer \r\nPlayer Movement Implementation\nProcedural Animation Programer\nTexture
-    Painter\r\nHead Shander Programer\nWeapons expert\n\n\n\n\nMusic\nSound Effects"
+    Designer\nHead Modeler\r\nHead Player Movement Programer\nIK Specialist\r\nIT
+    support\nLevel Designer \r\nPlayer Movement Implementation\nProcedural Animation
+    Programer\nShop designer\nTexture Painter\r\nHead Shander Programer\nWeapons
+    expert\n\n\n\n\nMusic\nSound Effects"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1144,8 +1146,12 @@ MonoBehaviour:
 
     Simon Jonasson
 
-    Simon
-    Jonasson
+    Axel
+    Eriksson
+
+    Simon Jonasson
+
+    Simon Jonasson
 
     Johan Brinkenberg
 
@@ -1153,10 +1159,10 @@ MonoBehaviour:
 
 
 
-    Forget Me Not - Patrick Patrikios
+    Forget
+    Me Not - Patrick Patrikios
 
-    www.zapsplat.com
-    - Alan McKinney
+    www.zapsplat.com - Alan McKinney
 
 '
   m_isRightToLeft: 0
