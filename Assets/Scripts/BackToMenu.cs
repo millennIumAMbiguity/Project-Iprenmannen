@@ -5,7 +5,7 @@ public class BackToMenu : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetButtonDown("cancel")) {
+        if (Input.GetButtonDown("Cancel")) {
             Back();
         }
     }
