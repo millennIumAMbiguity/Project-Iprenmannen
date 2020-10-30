@@ -197,6 +197,8 @@ MonoBehaviour:
 
 
 
+
+
     Assets'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -831,9 +833,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nProgramers\n\n\n\nIK Specialist\r\n3D Rigger\r\nHead Modeler\r\nLevel
-    Designer \r\nTexture Painter\r\nHead Shander Programer\nAI Designer\nAI Behavor
-    Programer\n\n\n\n\nMusic\nSound Effects"
+  m_text: "\nProgramers\n\n\n\nUI designers\n\n\nIK Specialist\r\n3D Rigger\r\nHead
+    Modeler\r\nLevel Designer \r\nTexture Painter\r\nHead Shander Programer\nAI Designer\nAI
+    Behavor Programer\nWeapons expert\n\n\n\nMusic\nSound Effects"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1113,7 +1115,8 @@ MonoBehaviour:
     Simon
     Jonasson
 
-    Simon Jonasson
+    Axel Eriksson
+
 
     Simon Jonasson
 
@@ -1128,15 +1131,20 @@ MonoBehaviour:
 
     Simon Jonasson
 
+    Simon
+    Jonasson
+
+    Simon Jonasson
+
+    Johan Brinkenberg
 
 
 
 
-    Forget
-    Me Not - Patrick Patrikios
+    Forget Me Not - Patrick
+    Patrikios
 
-    foley_footstep_single_shoe_cork_wedge_wet_mud
-    - Alan McKinney
+    www.zapsplat.com - Alan McKinney
 
 '
   m_isRightToLeft: 0
@@ -1181,7 +1189,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
