@@ -70,5 +70,12 @@ public class MenuManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
+
+    public void ExitToMainMenu()
+    {
+        ResumeGame();
+        UnlockMouse();
+        AutoFade.LoadLevel(0, 2f, 2f, Color.black);
+    }
     
 }
