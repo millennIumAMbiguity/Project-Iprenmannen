@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : MonoBehaviour
 {
+    public AudioSource footSound;
+
     [Header("Character stats")]
     [Range(1f, 100f)]
     public float walkingSpeed = 7.5f;
@@ -25,8 +27,9 @@ public class FPSController : MonoBehaviour
     [Range(0.1f, 10f)]
     public float leanAngle = 0.5f;
 
-    CharacterController characterController;
-    Animator anim;
+    private CharacterController characterController;
+    private Animator anim;
+
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
@@ -37,6 +40,7 @@ public class FPSController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        footSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -95,5 +99,10 @@ public class FPSController : MonoBehaviour
         jump = true;
         yield return new WaitForSeconds(acceptableJumpTime);
         jump = false;
+    }
+
+    public void PlayFootStepSound()
+    {
+        footSound.Play();
     }
 }
