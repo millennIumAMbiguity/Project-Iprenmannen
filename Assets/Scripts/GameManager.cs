@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     {
         GameIsPaused = false;
         ShopIsOpen = false;
-        inShopArea = false;
+        inShopArea = true;
         menuManager.LockMouse();
     }
 
@@ -38,12 +38,11 @@ public class GameManager : MonoBehaviour
         //Checking conditions for ShopMenu.
         if (inShopArea)
         {
-            if(!ShopIsOpen && Input.GetButtonDown("shopButton"))
+            if(!ShopIsOpen && Input.GetKeyDown(KeyCode.E))
             {
                 menuManager.OpenShopMenu();
             }
-
-            if (ShopIsOpen && Input.GetButtonDown("shopButton"))
+            else if (ShopIsOpen && Input.GetKeyDown(KeyCode.E))
             {
                 menuManager.CloseShopMenu();
             }

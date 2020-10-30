@@ -1,20 +1,41 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UpgradeShopManager : MonoBehaviour
 {
-	void UpgradePlayerHealth()
+	public TMPro.TextMeshProUGUI hp;
+	public TMPro.TextMeshProUGUI dmg;
+
+	private void OnEnable()
 	{
-		Stats.playerHealthUpgrades++;
-		Debug.Log("Pressed HP button");
+		DisplayPlayerDamage();
+		DisplayPlayerHealth();
 	}
 
-	void UpgradePlayerDamage()
+	public void UpgradePlayerHealth()
+	{
+		Stats.playerHealthUpgrades++;
+		DisplayPlayerHealth();
+	}
+
+	public void UpgradePlayerDamage()
 	{
 		Stats.playerDamage++;
-		Debug.Log("Pressed DMG button");
+		DisplayPlayerDamage();
+	}
+
+	private void DisplayPlayerHealth()
+	{
+		hp.text = "Health: " + (Stats.playerHealthUpgrades + 2);
+	}
+
+	private void DisplayPlayerDamage()
+	{
+		dmg.text = "Damage: " + Stats.playerDamage;
 	}
 }
