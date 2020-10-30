@@ -59,6 +59,7 @@ public class AI : MonoBehaviour
     }
 
     public void Kill() {
+        Stats.instance.kills++;
         Destroy(parent);
     }
 
