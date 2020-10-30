@@ -841,7 +841,7 @@ MonoBehaviour:
     Designer\nHead Modeler\r\nHead Player Movement Programer\nIK Specialist\r\nIT
     support\nLevel Designer \r\nPlayer Movement Implementation\nProcedural Animation
     Programer\nShop designer\nTexture Painter\r\nHead Shander Programer\nWeapons
-    expert\n\n\n\n\nMusic\nSound Effects"
+    expert\n\n\n\n\nMusic\nSound Effects\nFlesh Texture"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1164,7 +1164,7 @@ MonoBehaviour:
 
     www.zapsplat.com - Alan McKinney
 
-'
+    www.texturecan.com'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
