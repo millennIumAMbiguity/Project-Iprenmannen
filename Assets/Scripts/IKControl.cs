@@ -11,6 +11,10 @@ public class IKControl : MonoBehaviour
 
     float angle;
 
+    [Header("Sound")]
+    public AudioSource audioSource;
+    public AudioClip hitSound;
+
     void Start() {
         angle = 2 * Mathf.PI / targets.Length;
     }
@@ -35,6 +39,7 @@ public class IKControl : MonoBehaviour
 
                 if (Vector3.Distance(hit.point, targets[i].position) > walkDistance) {
                     targets[i].position = hit.point + (1f + UnityEngine.Random.Range(-1f,0f))*( hit.point - targets[i].position);
+                    audioSource.PlayOneShot(hitSound);
 #if UNITY_EDITOR
                     Debug.DrawLine(targets[i].position, targets[i].position + new Vector3(0,0.3f,0),Color.green, 0.5f);
 #endif
